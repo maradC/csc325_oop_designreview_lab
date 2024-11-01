@@ -14,9 +14,6 @@ public class Freshman extends Student {
      */
     public Freshman(String name, short age,double GPA, int credits) {
         super(name, age, GPA, credits);
-        if(credits < 30){
-            throw new IllegalArgumentException("credits must be at least 30");
-        }
     }
 
     /**
