@@ -4,6 +4,8 @@
 
 package com.mycompany.csc325_oop_designreview_lab;
 
+import java.util.Scanner;
+
 /**
  *
  * @author MoaathAlrajab
@@ -11,33 +13,35 @@ package com.mycompany.csc325_oop_designreview_lab;
 public class MainClass {
 
  public static void main(String[] args) {
-		// ToDo 5: Fix the error
+	 // Create a Scanner object to get user input
+	 Scanner scanner = new Scanner(System.in);
 
-		// ToDo 6: Fix the constructor of the Student class
+	 // Create a Student instance with initial details (GPA will be updated later)
+	 Student std1 = new Student("James", (short) 20, 3.5, 12); // name, age, GPA, credits
+	 System.out.println("Initial details of student: " + std1);
 
-                // Todo 7: Create two classes for Freshman and Senior 
+	 // Allow user to update GPA for std1
+	 System.out.print("Enter the new GPA for James: ");
+	 double newGPA = Double.parseDouble(scanner.nextLine());
+	 std1.setGPA(newGPA);
+	 System.out.println("Updated details of student: " + std1); // Output updated student details
 
-                // ToDo 8: The senior class should have a minimum of 85 credits  
+	 // Create a Freshman instance using the same details as std1
+	 Freshman freshman = new Freshman("James", (short) 20, 3.5, 12); // name, age, GPA, credits
+	 System.out.println("\nDetails of Freshman: " + freshman); // Output freshman details
 
-		// ToDo 9: Add a toString method for the Student class
-		// ToDo 10: Add a toString method for the Freshman class
+	 // Create a Senior instance with at least 85 credits
+	 Senior senior = null;
+	 try {
+		 senior = new Senior("John", (short) 30, 3.8, 90); // name, age, GPA, credits
+		 System.out.println("\nDetails of Senior: " + senior); // Output senior details
+	 } catch (IllegalArgumentException e) {
+		 System.out.println("Error: " + e.getMessage());
+	 }
 
-		Student std1= new Student("James", 20);
-                // ToDo 11: Add a toString method for the Senior class
-
-		Freshman std1= new Student("James", 20, 12); // name, age, credits
-
-                Senior std2 = new Student("John", 30, 90);
-
-		// ToDo 12: Set the gpa of the student using the scanner and user
-		// 			input and then print the output.
-
-		System.out.println(std1);
-
-                System.out.println(std2);
-
-		// ToDo 13: add comments and explain your code
-
+	 // Close the scanner to avoid resource leak
+	 scanner.close();
+ }
 	}
 
 }
