@@ -12,7 +12,10 @@ public class Student extends Human {
     private double GPA;
 
 	// ToDo 1: Make this class a child of Human
-    public Stu
+    public Student(String name, short age, double GPA){
+        super(name, age);
+        this.GPA = GPA;
+    }
 
 	// ToDo 2: Fix the resulting errors
 
