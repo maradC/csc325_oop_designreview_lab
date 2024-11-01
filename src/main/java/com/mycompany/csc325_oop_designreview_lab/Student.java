@@ -10,6 +10,7 @@ package com.mycompany.csc325_oop_designreview_lab;
  */
 public class Student extends Human {
     private double GPA;
+    private int credits;
 
     /**
      * Constructor for the Student class.
@@ -19,9 +20,10 @@ public class Student extends Human {
      * @param age the age of the student
      * @param GPA the GPA of the student
      */
-    public Student(String name, short age, double GPA){
+    public Student(String name, short age, double GPA, int credits){
         super(name, age);
         this.GPA = GPA;
+        this.credits = credits;
     }
     /**
      * Gets the GPA of the student.
@@ -38,6 +40,24 @@ public class Student extends Human {
      */
     public void setGPA(double GPA) {
         this.GPA = GPA;
+    }
+
+    /**
+     * Gets the amount of credits of the student.
+     *
+     * @return credits as int
+     */
+    public int getCredits() {
+        return credits;
+    }
+
+    /**
+     * Sets the amount of credits of the student.
+     *
+     * @param credits the amount of credits is set
+     */
+    public void setCredits(int credits) {
+        this.credits = credits;
     }
 
     /**
@@ -59,6 +79,16 @@ public class Student extends Human {
     @Override
     public void setAddress(String address) {
         super.address = address;
+    }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "name=" + getName() +
+                ", age=" + getAge() +
+                ", credits=" + credits +
+                ", GPA=" + GPA +
+                '}';
     }
 
 
