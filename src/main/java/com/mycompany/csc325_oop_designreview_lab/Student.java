@@ -21,5 +21,24 @@ public class Student extends Human {
 
 	// ToDo 3: Add a field for GPA and create a setter and a getter
 
-	// ToDo 4: Add comments to your code
+    public double getGPA() {
+        return GPA;
+    }
+
+    public void setGPA(double GPA) {
+        this.GPA = GPA;
+    }
+
+    @Override
+    public String getAddress() {
+        return super.address;
+    }
+
+    @Override
+    public void setAddress(String address) {
+        super.address = address;
+    }
+
+
+    // ToDo 4: Add comments to your code
 }
