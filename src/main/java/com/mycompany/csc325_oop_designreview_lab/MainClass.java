@@ -6,10 +6,7 @@ package com.mycompany.csc325_oop_designreview_lab;
 
 import java.util.Scanner;
 
-/**
- *
- * @author MoaathAlrajab
- */
+
 public class MainClass {
 
  public static void main(String[] args) {
@@ -17,7 +14,7 @@ public class MainClass {
 	 Scanner scanner = new Scanner(System.in);
 
 	 // Create a Student instance with initial details (GPA will be updated later)
-	 Student std1 = new Student("James", (short) 20, 3.5, 12); // name, age, GPA, credits
+	 Student std1 = new Student("James",  (short)20, 3.5, 12);
 	 System.out.println("Initial details of student: " + std1);
 
 	 // Allow user to update GPA for std1
@@ -41,8 +38,7 @@ public class MainClass {
 
 	 // Close the scanner to avoid resource leak
 	 scanner.close();
- }
-	}
-
+ 	}
 }
+
 
